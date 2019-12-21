@@ -1,0 +1,113 @@
+<!--<div class="row">
+    <div class="col-sm-3">
+        <button class="btn btn-primary"> Add</button>
+    </div>
+    <div class="col-sm-3"><button class="btn btn-primary"> Update</button></div>
+    <div class="col-sm-3"><button class="btn btn-primary"> Delete</button></div>
+    <div class="col-sm-3"><button class="btn btn-primary"> V</button></div>
+  </div>
+
+  <h2 [class]= "successClass">
+      Test
+  </h2>
+  <h2 [class.text-danger]= "hasError">
+    Test
+</h2>
+<h2 [ngClass]="messageClasses">
+    Testing ngClass
+</h2>
+<h3 [ngStyle]="styleClasses">
+    Testing styleClasses
+</h3>
+<button (click)="onClick($event)">Greet</button>
+
+<button (click)="greeting='in the call itself'">Greet</button>
+{{greeting}}
+  <input #myInputValue [id]="myVariableInTypeScript" type="text" value="test">
+  <input [disabled]="isDisabled" type="text" value="test">
+<button (click) = "logMessage(myInputValue.value)"> Log</button>
+<input [(ngModel)]="name" type = "text"> {{name}}
+<h3 *ngIf = "displayName; else elseBlock">
+    Testing styleClasses
+</h3>
+<ng-template #elseBlock>
+<h3>
+    This is else block
+</h3>
+</ng-template>
+
+<div [ngSwitch] = "color">
+    <div *ngSwitchCase = "'red'"> You picked red</div>
+    <div *ngSwitchCase = "'blue'"> You picked blue</div>
+    <div *ngSwitchCase = "'green'"> You picked green</div>
+    <div *ngSwitchDefault> pick again</div>
+</div>
+<div *ngFor="let mycolor of colors; index as i">
+{{i}}{{mycolor}}
+</div>
+<h2> {{ "Hello " + myName | lowercase}} </h2>
+<h2> {{ "Hello " + myName | uppercase}} </h2>
+<h2> {{ "Hello " + myName | titlecase}} </h2>
+<h2> {{ "Hello " + myName | slice:2:8}} </h2>
+<h2> {{ person | json}} </h2>
+<h2>{{5.678 | number:'1.2-3'}} </h2>
+<h2>{{5 |percent}} </h2>
+<h2>{{44 | currency}} </h2>
+<h2>{{44 | currency:'EUR':'code'}} </h2>
+
+<button (click)="fireEvent()">fireEvent</button>
+
+<h3> {{ date }} </h3>
+<h3> {{ date | date:'short'}} </h3>
+<h3> {{ date | date:'shortDate'}} </h3>
+<h3> {{ date | date:'shortTime'}} </h3>
+
+<h3> {{ date }} </h3>
+<h3> {{ date | date:'long'}} </h3>
+<h3> {{ date | date:'longDate'}} </h3>
+<h3> {{ date | date:'longTime'}} </h3>
+
+<h3> {{ date }} </h3>
+<h3> {{ date | date:'medium'}} </h3>
+<h3> {{ date | date:'mediumDate'}} </h3>
+<h3> {{ date | date:'mediumTime'}} </h3>-->
+<h2>Fare Details</h2>
+<h2>{{fares | json}}</h2>
+<ul *ngFor="let fare of fares">
+    <li>{{ fare.fareId + " " + fare.flightId }} {{ fare.economy + " " + fare.premiumEconomy }} {{ fare.business + " " + fare.firstClass }}  </li>
+</ul> 
+<form>
+    FlightId:<br>
+    <input type="number"  [(ngModel)]="fare.flightId" name="fare.flightId">
+    <br>
+    <p>{{fare.flightId}}</p>
+    economy:<br>
+    <input type="number" [(ngModel)]="fare.economy" name="fare.economy"><br>
+    premiumEconomy:<br>
+    <input type="number" [(ngModel)]="fare.premiumEconomy" name="fare.premiumEconomy">
+    <br>
+    business:<br>
+    <input type="number" [(ngModel)]="fare.business" name="fare.business"><br>
+    firstClass:<br>
+    <input type="number" [(ngModel)]="fare.firstClass" name="fare.firstClass">
+  </form>
+<button class="btn btn-primary" (click)="onClick(fare)">Greet</button>
+<button (click)="onClickById(fare)">byId</button>
+<p>{{fareData | json}} </p>
+<button (click)="onClickByDelete(fare)">delete</button>
+
+<!--
+<div *ngFor="let mycolor of colors; first as f">
+        {{f}}{{mycolor}}
+        </div>
+        <div *ngFor="let mycolor of colors; last as l">
+                {{l}}{{mycolor}}
+                </div>
+                <div *ngFor="let mycolor of colors; odd as o">
+                        {{o}}{{mycolor}}
+                        </div>
+                        <div *ngFor="let mycolor of colors; even as e">
+                                {{e}}{{mycolor}}
+                                </div>
+                            -->
+    
